@@ -3,10 +3,10 @@ import Itemlivre from './Itemlivre'
 
 function Grilivre(props) {
   return (
-    <div>
-        <Itemlivre avis={props.avis}/>
-        <Itemlivre avis={props.avis}/>
-        <Itemlivre avis={props.avis}/>
+    <div className=' min-h-fit'>
+        <Itemlivre avis={props.avis} part={props.part}/>
+        <Itemlivre avis={props.avis} part={props.part}/>
+        <Itemlivre avis={props.avis} part={props.part}/>
     </div>
   )
 }

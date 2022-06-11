@@ -21,6 +21,13 @@ import Adforum from "./pages/Admin/Adforum";
 import Adlivre from "./pages/Admin/Adlivre";
 import Adevenement from "./pages/Admin/Adevenement"
 import Adavis from "./pages/Admin/Adavis";
+import Aditemart from "./pages/Admin/Aditemart";
+import Adlistpod from "./pages/Admin/Adlistpod";
+import Adlistpart from "./pages/Admin/Adlistpart";
+import Formart from "./pages/Admin/Formart";
+import Formlivre from "./pages/Admin/Formlivre";
+import Formcatpod from "./pages/Admin/Formcatpod";
+import Formevent from "./pages/Admin/Formevent";
 
 function App() {
   return (
@@ -47,6 +54,14 @@ function App() {
         <Route path="/admin/livre" element={<Adlivre />} />
         <Route path="/admin/evenement" element={<Adevenement />} />
         <Route path="/admin/avis" element={<Adavis />} />
+        <Route path="/admin/listarticle" element={<Aditemart />} />
+        <Route path="/admin/listpodcast" element={<Adlistpod />} />
+        <Route path="/admin/listparticipant" element={<Adlistpart />} />
+        <Route path="/admin/formarticle" element={<Formart />} />
+        <Route path="/admin/formlivre" element={<Formlivre />} />
+        <Route path="/admin/formcatpod" element={<Formcatpod />} />
+        <Route path="/admin/formpodcast" element={<Formcatpod />} />
+        <Route path="/admin/formevent" element={<Formevent />} />
         <Route path="*" element={<Erreur404 />} />
       </Routes>
     </BrowserRouter>

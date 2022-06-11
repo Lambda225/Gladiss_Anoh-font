@@ -8,14 +8,15 @@ function Adaccueil() {
   const article = "Article"
   const poscast = "Podcast"
   return (
-    <div className='flex'>
+    <div className='flex h-screen bg-rose-50'>
         <Adnavbar />
-        <div className='w-3/4 h-screen overflow-y-scroll'>
+        <div className='w-full lg:w-3/4 overflow-y-scroll'>
           <Adsearchbar />
-          <div className='bg-rose-50 py-10'>
+          <div className=' h-full py-10'>
             <Stat />
             <Griadaccueil categorie={article}/>
             <Griadaccueil categorie={poscast}/>
+            <div className='h-10'></div>
           </div>
         </div>
     </div>

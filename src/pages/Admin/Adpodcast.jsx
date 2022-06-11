@@ -5,18 +5,19 @@ import Adsearchbar from '../../composant/General/Adsearchbar'
 import Btnaddcat from '../../composant/General/Btnaddcat'
 
 function Adpodcast() {
-    const podcast = "Podcast"
+  const article = "Catégorie Podcast"
   return (
-    <div className='flex'>
+    <div className='flex h-screen bg-rose-50'>
         <Adnavbar />
-        <div className='w-3/4 h-screen overflow-y-scroll'>
+        <div className='w-full lg:w-3/4 overflow-y-scroll'>
           <Adsearchbar />
-          <div className='bg-rose-50 py-10'>
+          <div className='h-full py-10'>
             <div>
-              <Btnaddcat categorie={podcast}/>
+              <Btnaddcat categorie={article}/> 
             </div>
             <Griadaccueil />
             <Griadaccueil />
+            <div className='h-10'></div>
           </div>
         </div>
     </div>

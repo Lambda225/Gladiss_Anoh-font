@@ -7,12 +7,12 @@ function Userinfo() {
     <div>
         <Navbar />
         <div className='flex flex-col sm:flex-row justify-center items-center h-screen'>
-            <div className='h-60 w-48 flex items-center rounded-lg sm:mr-5 shadow-3xl mb-7 sm:mb-0'><UserIcon className='h12 text-blue-200'/></div>
+            <div className='h-60 w-48 2xl:w-60 2xl:h-72 flex items-center rounded-lg sm:mr-5 shadow-3xl mb-7 sm:mb-0'><UserIcon className=' h-80 text-blue-200'/></div>
             <div className='text-center sm:text-left'>
-                <h1 className=' text-xl font-semibold mb-2'>KOUAME</h1>
-                <h2 className=' text-base font-semibold mb-2'>ANTONIO PARFAIT</h2>
-                <h3 className='mb-3'>parfaitk02@gmail.com</h3>
-                <a href='#' className=' bg-blue-200 rounded-lg flex justify-center items-center text-white py-3'><PencilIcon className='h-7 mr-1'/> Modifier</a>
+                <h1 className=' text-xl 2xl:text-3xl font-semibold mb-2'>KOUAME</h1>
+                <h2 className=' 2xl:text-2xl font-semibold mb-2'>ANTONIO PARFAIT</h2>
+                <h3 className='mb-3 2xl:text-xl'>parfaitk02@gmail.com</h3>
+                <a href='#' className=' bg-blue-200 rounded-lg flex justify-center items-center 2xl:text-xl text-white py-3'><PencilIcon className='h-7 2xl:h-10 mr-1'/> Modifier</a>
             </div>
         </div>
     </div>

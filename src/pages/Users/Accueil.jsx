@@ -3,7 +3,7 @@ import Avis from '../../composant/Accueil/Avis'
 import Evenement from '../../composant/Accueil/Evenement'
 import Footer from '../../composant/General/Footer'
 import Invitationinscpt from '../../composant/General/Invitationinscpt'
-import Livre from '../../composant/Accueil/Livre'
+import Clivre from '../../composant/Accueil/Clivre'
 import Navbar from '../../composant/General/Navbar'
 import Cpodcast from '../../composant/Accueil/Cpodcast'
 import Slidearticle from '../../composant/Accueil/Slidearticle'
@@ -15,15 +15,15 @@ function Accueil(props) {
 
         <header className='flex flex-col items-center justify-around h-screen bg-rose-50 md:flex-row px-[6%] gap-x-[4%]'>
           <div className='w-10/12'>
-            <h1 className='text-2xl font-semibold mb-8 text-marron-200'>ACCUEIL</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis officiis dicta enim quisquam illo aperiam commodi excepturi aspernatur modi obcaecati ullam facere, ad velit esse accusamus voluptates autem qui eligendi.</p>
+            <h1 className='text-2xl 2xl:text-4xl font-semibold mb-8 text-marron-200'>ACCUEIL</h1>
+            <p className='2xl:text-2xl'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis officiis dicta enim quisquam illo aperiam commodi excepturi aspernatur modi obcaecati ullam facere, ad velit esse accusamus voluptates autem qui eligendi.</p>
           </div>
           <div className='w-10/12 h-72 bg-white rounded-lg'></div>
         </header>
         
         <Slidearticle />
         <Evenement />
-        <Livre />
+        <Clivre />
         <Cpodcast />
         <Avis />
         <Invitationinscpt />
