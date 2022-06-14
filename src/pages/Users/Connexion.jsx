@@ -9,7 +9,7 @@ const LOGIN_URL = "/login";
 
 function Connexion() {
   const { setAuth } = useAuth();
-
+  const { auth } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -62,6 +62,10 @@ function Connexion() {
       errRef.current.focus();
     }
   };
+
+  if (!!auth?.user) {
+    navigate("/", { replace: true });
+  }
 
   return (
     <div className="bg-rose-50 min-h-screen flex flex-col items-center py-20 sm:flex-row sm:gap-x-5 lg:gap-x-14 sm:justify-center ">
