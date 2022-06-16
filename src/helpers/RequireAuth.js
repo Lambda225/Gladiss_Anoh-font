@@ -5,10 +5,6 @@ const RequireAuth = ({ roles }) => {
   const { auth } = useAuth();
   console.log("auth", auth);
   const location = useLocation();
-  console.log(
-    "required",
-    auth?.roles?.find((role) => roles?.includes(role))
-  );
   return auth?.roles?.find((role) => roles?.includes(role)) ? (
     <Outlet />
   ) : auth?.accessToken ? ( //change à partie du token actualisé

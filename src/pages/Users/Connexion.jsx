@@ -34,16 +34,16 @@ function Connexion() {
     e.preventDefault();
 
     try {
-      console.log(user, pwd);
       const response = await axios.post(LOGIN_URL, {
         email: user,
         password: pwd,
       });
       const access_token = response?.data?.access_token;
+      const userInfo = response?.data.user;
       console.log("access_token:", access_token);
       const roles = response?.data?.user?.roles;
       console.log(roles);
-      setAuth({ user, roles, access_token });
+      setAuth({ userInfo, roles, access_token });
       resetUser();
       setPwd("");
       navigate(from, { replace: true });
