@@ -21,7 +21,7 @@ function Navbar(props) {
       <nav className="flex justify-between py-8 px-7 bg-rose-50 border-[1px] border-b-marron-200 fixed w-full z-30">
         <div className="flex">
           <h1 className="font-bold items-center flex text-2xl 2xl:text-4xl">
-            <NavLink to="/">LOGO</NavLink>
+            <NavLink to="/" className='relative'>NALA <span className=" absolute bottom-[-10px] left-4 font-normal text-xs">coaching</span> </NavLink>
           </h1>
           <ul className="hidden md:flex items-center ml-8">
             <NavLink to="/forum">

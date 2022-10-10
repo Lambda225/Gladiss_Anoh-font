@@ -31,6 +31,8 @@ import Formevent from "./pages/Admin/Formevent";
 import PersistLogin from "./helpers/PersistLogin";
 import RequireAuth from "./helpers/RequireAuth";
 import { Routes, Route } from "react-router-dom";
+import Formcatart from "./pages/Admin/Formcatart";
+import Formpodcast from "./pages/Admin/Formpodcast";
 const roles = {
   is_admin: "admin",
   is_user: "user",
@@ -42,23 +44,25 @@ function App() {
         {/* routes publiques */}
         <Route path="connexion" element={<Connexion />} />
         <Route path="inscription" element={<Inscription />} />
+        <Route path="/" element={<Accueil />} />
         <Route path="apropos" element={<Apropos />} />
+        <Route path="/article" element={<Article />} />
+        <Route path="/itemarticle/:id" element={<Itemart />} />
+        <Route path="/podcast" element={<Podcast />} />
+        <Route path="/podcastifram/:id" element={<Podifram />} />
+        <Route path="/forum" element={<Forum />} />
+        <Route path="/calendrier" element={<Calendrier />} />
+        <Route path="/boutique" element={<Boutique />} />
+        <Route path="/apropos" element={<Apropos />} />
 
         {/* we want to protect these routes */}
         <Route element={<PersistLogin />}>
           <Route element={<RequireAuth roles={[roles.is_user]} />}>
-            <Route path="/" element={<Accueil />} />
-            <Route path="/forum" element={<Forum />} />
-            <Route path="/calendrier" element={<Calendrier />} />
-            <Route path="/boutique" element={<Boutique />} />
-            <Route path="/apropos" element={<Apropos />} />
+
             <Route path="/message" element={<Message />} />
             <Route path="/userinfo" element={<Userinfo />} />
             <Route path="/updateuser" element={<Updateuser />} />
-            <Route path="/article" element={<Article />} />
-            <Route path="/itemarticle" element={<Itemart />} />
-            <Route path="/podcast" element={<Podcast />} />
-            <Route path="/podcastifram" element={<Podifram />} />
+            
           </Route>
 
           <Route element={<RequireAuth roles={roles.is_admin} />}>
@@ -68,19 +72,23 @@ function App() {
             <Route path="/admin/forum" element={<Adforum />} />
             <Route path="/admin/livre" element={<Adlivre />} />
             <Route path="/admin/evenement" element={<Adevenement />} />
-            <Route path="/admin/avis" element={<Adavis />} />
-            <Route path="/admin/listarticle" element={<Aditemart />} />
-            <Route path="/admin/listpodcast" element={<Adlistpod />} />
-            <Route path="/admin/listparticipant" element={<Adlistpart />} />
-            <Route path="/admin/formarticle" element={<Formart />} />
-            <Route path="/admin/formlivre" element={<Formlivre />} />
-            <Route path="/admin/formcatpod" element={<Formcatpod />} />
-            <Route path="/admin/formpodcast" element={<Formcatpod />} />
             <Route path="/admin/formevent" element={<Formevent />} />
+            <Route path="/admin/avis" element={<Adavis />} />
+            <Route path="/admin/listarticle/:id" element={<Aditemart />} />
+            <Route path="/admin/listpodcast/:id" element={<Adlistpod />} />
+            <Route path="/admin/listparticipant" element={<Adlistpart />} />
+            <Route path="/admin/formarticle/:id" element={<Formart />} />
+            <Route path="/admin/formlivre/" element={<Formlivre />} />
+            <Route path="/admin/formcatpod" element={<Formcatpod />} />
+            <Route path="/admin/formcatart" element={<Formcatart />} />
+            <Route path="/admin/formpodcast/:id" element={<Formpodcast />} />
+            
           </Route>
         </Route>
 
+        
         {/* catch all */}
+        <Route path="/" element={<Accueil />} />
         <Route path="*" element={<Erreur404 />} />
       </Route>
     </Routes>

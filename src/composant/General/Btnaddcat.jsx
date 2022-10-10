@@ -5,7 +5,7 @@ function Btnaddcat(props) {
   const navigate = useNavigate();
   return (
     <button
-      onClick={() => navigate("/admin/formevent")}
+      onClick={() => navigate(props.lien)}
       className="flex items-center ml-10 w-fit cursor-pointer"
     >
       <div className="h-14 z-50 shadow-3xl w-14 flex justify-center items-center text-2xl rounded-full bg-white">

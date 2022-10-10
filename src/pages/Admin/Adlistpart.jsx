@@ -1,5 +1,5 @@
 import React from 'react'
-import Gritem from '../../composant/Adlivre/Gritem'
+import GridItemPart from '../../composant/Adlivre/GridItemPart'
 import Adnavbar from '../../composant/General/Adnavbar'
 import Adsearchbar from '../../composant/General/Adsearchbar'
 
@@ -14,7 +14,7 @@ function Adlistpart() {
                 <div className="bg-rose-50">
                     <div className="flex justify-end pr-6 py-10">
                     </div>
-                    <Gritem part={part}/>
+                    <GridItemPart part={part}/>
                 </div>
             </div>
         </div>

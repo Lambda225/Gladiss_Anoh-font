@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { ChevronDownIcon, XIcon } from "@heroicons/react/solid";
-import { catpodcast, podcasts } from "../../data";
+import { Link } from "react-router-dom";
 
-function Itempodcast() {
+function Itempodcast({catpodcast,podcasts}) {
   const [catpodchoix, setcatpodchoix] = useState(1);
   const [liscatart, setliscatart] = useState(false);
   return (
@@ -49,15 +49,15 @@ function Itempodcast() {
       </ul>
       <div className="grid justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-7 sm:gap-x-12 mt-10">
         {podcasts
-          .filter((cat) => cat.idcategorie === catpodchoix)
+          .filter((cat) => cat.cat_podcast_id === catpodchoix)
           .map((pod) => {
             return (
-              <div key={pod.id} className="flex flex-col items-center">
-                <div className="h-52 w-52 2xl:h-64 2xl:w-64 rounded-lg bg-blue-200 cursor-pointer mb-3"></div>
+              <Link to={`/podcastifram/${pod.id}`} key={pod.id} className="flex flex-col items-center">
+                <div className="h-52 w-52 2xl:h-64 2xl:w-64 rounded-lg bg-blue-200 cursor-pointer mb-3 overflow-hidden"> <img src={pod.photo} alt="" className=" object-cover w-full h-full"/> </div>
                 <h3 className="text-center 2xl:text-2xl">
-                  Lorem ipsum dolor sit amet.
+                  {pod.titre}
                 </h3>
-              </div>
+              </Link>
             );
           })}
       </div>

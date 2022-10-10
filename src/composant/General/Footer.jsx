@@ -6,11 +6,11 @@ function Footer() {
     <div className='py-10 px-[6%] border-t-[1px] border-gray-200'>
         <div className='md:flex items-center justify-between'>
             <div>
-                <NavLink to='/' ><h1 className='text-xl font-semibold text-center mb-7 2xl:text-4xl'>LOGO</h1></NavLink>
+                <NavLink to='/' ><h1 className='text-xl font-semibold text-center mb-7 2xl:text-4xl relative'>NALA <span className=" absolute bottom-[-10px] left-24 font-normal text-xs">coaching</span> </h1></NavLink>
                 <div className='flex gap-3 justify-center mb-10'>
-                    <div className=' h-16 w-16 2xl:h-20 2xl:w-20 rounded-full bg-rose-50 '></div>
-                    <div className=' h-16 w-16 2xl:h-20 2xl:w-20 rounded-full bg-rose-50 '></div>
-                    <div className=' h-16 w-16 2xl:h-20 2xl:w-20 rounded-full bg-rose-50 '></div>
+                    <div className=' h-16 w-16 2xl:h-20 2xl:w-20 rounded-full bg-rose-50 flex justify-center items-center '><img src="./icons8-f-de-facebook-100.png" alt="" className='h-8'/></div>
+                    <div className=' h-16 w-16 2xl:h-20 2xl:w-20 rounded-full bg-rose-50 flex justify-center items-center '><img src="./icons8-instagram-90.png" alt="" className='h-9' /></div>
+                    <div className=' h-16 w-16 2xl:h-20 2xl:w-20 rounded-full bg-rose-50 flex justify-center items-center '><img src="./icons8-linkedin-2-90.png" alt="" className='h-9' /></div>
                 </div>
             </div>
             <ul className='flex justify-center flex-wrap mb-4 gap-y-4 2xl:text-2xl'>

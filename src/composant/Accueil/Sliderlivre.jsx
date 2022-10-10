@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import Cartlivre from './Cartlivre';
-import { livres } from '../../data';
+// import { livres } from '../../data';
+import axios from '../../api/axios';
 
-function Sliderlivre() {
-  const [livre,setlivres] = useState(livres) 
+function Sliderlivre({livres}) {
+
   return (
     <>
       <Swiper
@@ -25,7 +26,7 @@ function Sliderlivre() {
         className="mySwiper"
       >
         {
-          livre.splice(0,3).map(liv => {
+          livres.splice(0,3).map(liv => {
             return <SwiperSlide key={liv.id} className='flex justify-center items-center '><Cartlivre livre={liv} /></SwiperSlide>
           })
         }

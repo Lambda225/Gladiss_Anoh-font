@@ -3,12 +3,9 @@ import { ChevronDownIcon, XIcon } from "@heroicons/react/solid";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Carteart from "../General/Carteart";
-import { catarticle, article } from "../../data";
 import Popart from "../General/Popart";
 
-function Slidearticle() {
-  const [articles, setarticles] = useState(article);
-
+function Slidearticle({articles,catarticle}) {
   const [itemart, setitemart] = useState({});
 
   const [catartchoix, setcatartchoix] = useState(1);
@@ -16,6 +13,7 @@ function Slidearticle() {
   const [liscatart, setliscatart] = useState(false);
 
   const [opencatre, setopencatre] = useState(false);
+
 
   const responsive = {
     superLargeDesktop: {
@@ -87,7 +85,7 @@ function Slidearticle() {
             className="py-10 z-0"
           >
             {articles
-              .filter((cat) => cat.idcategorie === catartchoix)
+              .filter((cat) => cat.cat_article_id === catartchoix)
               .slice(0, 8)
               .map((art) => {
                 return (

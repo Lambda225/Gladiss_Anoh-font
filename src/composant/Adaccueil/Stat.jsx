@@ -1,19 +1,20 @@
 import React from 'react'
 
-function Stat() {
+function Stat(propos) {
+  
   return (
-    <div className='flex flex-col md:flex-row p-7'>
+    <div className='flex justify-center flex-row p-7'>
         <div className='flex items-center px-5 py-5 border-b-2 md:border-b-0 md:border-r-2 border-marron-200'>
-            <h2 className='text-2xl font-semibold mr-4'>120</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing el.?</p>
+            <h2 className='text-2xl font-semibold mr-4'>{propos.articles.length}</h2>
+            <p>Nombre d'article</p>
         </div>
         <div className='flex items-center px-5 py-5 border-b-2 md:border-b-0 md:border-r-2 border-marron-200'>
-            <h2 className='text-2xl font-semibold mr-4'>120</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing el.?</p>
+            <h2 className='text-2xl font-semibold mr-4'>{propos.podcast.length}</h2>
+            <p>Nombre de podcast</p>
         </div>
         <div className='flex items-center px-5 py-5'>
             <h2 className='text-2xl font-semibold mr-4'>120</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing el.?</p>
+            <p>Nombre d'utilisateur</p>
         </div>
     </div>
   )

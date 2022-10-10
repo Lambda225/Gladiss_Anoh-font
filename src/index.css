@@ -18,6 +18,13 @@
     }
 }
 
+.lien.active{
+    @apply bg-rose-50 border-r-[3px] border-marron-200 text-marron-200 
+}
+.lien.active li{
+    @apply text-marron-200 
+}
+
 .e-calendar, .e-bigger.e-small .e-calendar{
     @apply max-w-none
 }

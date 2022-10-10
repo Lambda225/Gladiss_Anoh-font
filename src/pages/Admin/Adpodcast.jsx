@@ -1,11 +1,26 @@
 import React from 'react'
-import Griadaccueil from '../../composant/Adaccueil/Griadaccueil'
+import { useState } from 'react'
+import axios from '../../api/axios'
+import GridCatPod from '../../composant/Adaccueil/GridCatPod'
 import Adnavbar from '../../composant/General/Adnavbar'
 import Adsearchbar from '../../composant/General/Adsearchbar'
 import Btnaddcat from '../../composant/General/Btnaddcat'
 
 function Adpodcast() {
-  const article = "Catégorie Podcast"
+  const poscast = "Catégorie Podcast"
+  const [dataCatPod,setdataCatPod] = useState([])
+  const [compte,setcompte] = useState(1)
+
+  useState(() => {
+
+    axios.get('/catpodcast/create')
+    .then((resp) =>{
+      setdataCatPod(resp.data)
+    }).catch((errors) =>{
+      console.log(errors.request.response);
+    })
+
+  },[compte])
   return (
     <div className='flex h-screen bg-rose-50'>
         <Adnavbar />
@@ -13,10 +28,9 @@ function Adpodcast() {
           <Adsearchbar />
           <div className='h-full py-10'>
             <div>
-              <Btnaddcat categorie={article}/> 
+              <Btnaddcat categorie={poscast} lien={"/admin/formcatpod"}/> 
             </div>
-            <Griadaccueil />
-            <Griadaccueil />
+            <GridCatPod compte={compte} setcompte={setcompte} categorie={poscast} data={dataCatPod} />
             <div className='h-10'></div>
           </div>
         </div>
